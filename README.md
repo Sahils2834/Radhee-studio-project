@@ -1,9 +1,4 @@
-Here is a **complete, professional README.md** for your **Radhee Studio Photography Website** project.
-It includes **project overview, features, technology stack, folder structure, how to start backend + frontend, required libraries, environment setup, API usage, admin/customer login flow**, and more.
 
-You can copy–paste this directly as your **README.md** file.
-
----
 
 # 📸 **Radhee Studio – Photography Website**
 
