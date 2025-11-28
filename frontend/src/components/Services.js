@@ -1,0 +1,79 @@
+// src/components/Services.js
+import React from "react";
+import "./Services.css";
+
+const services = [
+  {
+    id: "wedding",
+    title: "Wedding Stories",
+    tag: "Full-day coverage",
+    description:
+      "From haldi to pheras and reception, we capture every ritual, laugh and tear with a blend of candid and classic frames.",
+    starting: "₹45,000"
+  },
+  {
+    id: "prewedding",
+    title: "Pre-Wedding",
+    tag: "Cinematic sessions",
+    description:
+      "Stylised couple sessions with location planning, posing guidance and creative concepts tailored to your story.",
+    starting: "₹18,000"
+  },
+  {
+    id: "portraits",
+    title: "Portraits",
+    tag: "Individual & couple",
+    description:
+      "Editorial-style portraits for artists, entrepreneurs and families who want timeless images with a clean aesthetic.",
+    starting: "₹6,000"
+  },
+  {
+    id: "family",
+    title: "Family Sessions",
+    tag: "At home or studio",
+    description:
+      "Warm, relaxed sessions that focus on genuine connections between parents, kids and extended families.",
+    starting: "₹9,000"
+  },
+  {
+    id: "corporate",
+    title: "Corporate",
+    tag: "Headshots & events",
+    description:
+      "Professional headshots, office lifestyle imagery and coverage for launches, conferences and internal events.",
+    starting: "On request"
+  },
+  {
+    id: "commercial",
+    title: "Commercial & Branding",
+    tag: "Brands & products",
+    description:
+      "Clean, impactful visuals for social media campaigns, catalogues and brand stories that stand out.",
+    starting: "On request"
+  }
+];
+
+export default function Services() {
+  return (
+    <section id="services" className="services-section">
+      <h2 className="section-heading">Our Services</h2>
+      <p className="section-subtitle">
+        Crafted experiences for every story – click any category from the menu
+        above to jump here
+      </p>
+
+      <div className="services-grid">
+        {services.map((s) => (
+          <article key={s.id} id={s.id} className="service-card">
+            <div className="service-tag">{s.tag}</div>
+            <h3>{s.title}</h3>
+            <p className="service-text">{s.description}</p>
+            <p className="service-price">
+              Starting at <span>{s.starting}</span>
+            </p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
