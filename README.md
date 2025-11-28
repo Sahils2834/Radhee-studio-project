@@ -141,8 +141,7 @@ Open terminal:
 
 ```sh
 cd backend
-npm install
-npm run dev
+node server.js
 ```
 
 Server runs at:
@@ -246,7 +245,7 @@ npm start
 ### **Backend**
 
 ```sh
-npm run dev
+node server.js
 ```
 
 ---
