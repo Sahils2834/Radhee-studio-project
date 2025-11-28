@@ -1,4 +1,3 @@
-// src/components/Hero.js
 import React from "react";
 import "./Hero.css";
 import heroLogo from "../assets/hero.jpg";

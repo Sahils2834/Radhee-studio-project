@@ -1,4 +1,3 @@
-// src/components/CustomCursor.js
 import React, { useEffect, useRef } from "react";
 import "./CustomCursor.css";
 
@@ -9,7 +8,6 @@ export default function CustomCursor() {
     const cursor = cursorRef.current;
     if (!cursor) return;
 
-    // Disable custom cursor on small screens
     if (window.innerWidth < 768) {
       cursor.style.display = "none";
       return;

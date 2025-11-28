@@ -1,7 +1,6 @@
-// src/components/Owner.js
 import React from "react";
 import "./Owner.css";
-import ownerPhoto from "../assets/owner.jpg"; // <-- change to your actual owner image
+import ownerPhoto from "../assets/owner.jpg";
 
 export default function Owner() {
   return (
