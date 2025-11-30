@@ -30,7 +30,7 @@ export default function AdminDashboard() {
 
   const loadBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/bookings", {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/bookings`, {
         headers: authHeaders,
       });
       setBookings(res.data);
@@ -44,7 +44,7 @@ export default function AdminDashboard() {
       const q =
         !cat || cat === "all" ? "" : `?category=${encodeURIComponent(cat)}`;
 
-      const res = await axios.get(`http://localhost:5000/api/gallery${q}`);
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/gallery${q}`);
       setGallery(res.data);
     } catch (err) {
       console.error("Gallery load error:", err);
@@ -63,7 +63,7 @@ export default function AdminDashboard() {
   const deleteBooking = async (id) => {
     if (!window.confirm("Delete this booking?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/bookings/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/bookings/${id}`, {
         headers: authHeaders,
       });
       loadBookings();
@@ -75,7 +75,7 @@ export default function AdminDashboard() {
   const deleteImage = async (id) => {
     if (!window.confirm("Delete this image?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/gallery/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/gallery/${id}`, {
         headers: authHeaders,
       });
       loadGallery();
@@ -149,7 +149,7 @@ export default function AdminDashboard() {
     try {
       setUploadProgress(0);
 
-      await axios.post("http://localhost:5000/api/gallery", fd, {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/gallery`, fd, {
         headers: {
           "Content-Type": "multipart/form-data",
           "x-auth-token": token,
@@ -338,7 +338,7 @@ export default function AdminDashboard() {
 
                   {gallery.map((g) => (
                     <div key={g._id} className="gallery-item">
-                      <img src={`http://localhost:5000${g.imageUrl}`} alt="" />
+                      <img src={`${process.env.REACT_APP_BACKEND_URL}${g.imageUrl}`} alt="" />
 
                       <div className="gallery-info">
                         <span>{g.category}</span>

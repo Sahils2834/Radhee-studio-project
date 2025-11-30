@@ -16,7 +16,7 @@ export default function CustomerBookings() {
     }
 
     axios
-      .get("http://localhost:5000/api/bookings/by-email", {
+      .get(`${process.env.REACT_APP_BACKEND_URL}/bookings/by-email`, {
         params: { email },
       })
       .then((res) => {

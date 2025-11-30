@@ -6,7 +6,7 @@ export default function Gallery() {
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/gallery")
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/gallery`)
       .then((res) => res.json())
       .then((data) => setImages(data))
       .catch((err) => console.error("Gallery fetch error:", err));
@@ -27,7 +27,7 @@ export default function Gallery() {
             onClick={() => setSelected(img)}
           >
             <img
-              src={`http://localhost:5000${img.imageUrl}`}
+              src={`${process.env.REACT_APP_BACKEND_URL}${img.imageUrl}`}
               alt={img.category}
             />
           </div>
@@ -38,7 +38,7 @@ export default function Gallery() {
         <div className="gallery-modal" onClick={() => setSelected(null)}>
           <img
             className="gallery-modal-img"
-            src={`http://localhost:5000${selected.imageUrl}`}
+            src={`${process.env.REACT_APP_BACKEND_URL}${selected.imageUrl}`}
             alt="full"
           />
         </div>
