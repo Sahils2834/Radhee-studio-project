@@ -189,11 +189,12 @@ app.post(
       }
 
       const category = req.body.category || "general";
+      const baseURL = process.env.BACKEND_URL || `http://localhost:${process.env.PORT || 5000}`;
       const saved = [];
 
       for (const file of req.files) {
         const img = new GalleryImage({
-          imageUrl: "/uploads/" + file.filename,
+          imageUrl: `${baseURL}/uploads/${file.filename}`,
           category,
         });
         await img.save();
@@ -213,7 +214,15 @@ app.get("/api/gallery", async (req, res) => {
     const { category } = req.query;
     const query = category ? { category } : {};
     const images = await GalleryImage.find(query).sort({ uploadedAt: -1 });
-    res.json(images);
+    
+    // Normalize URLs to ensure absolute URLs
+    const baseURL = process.env.BACKEND_URL || `http://localhost:${process.env.PORT || 5000}`;
+    const normalizedImages = images.map(img => ({
+      ...img.toObject(),
+      imageUrl: img.imageUrl.startsWith('http') ? img.imageUrl : `${baseURL}${img.imageUrl}`
+    }));
+    
+    res.json(normalizedImages);
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
@@ -225,11 +234,12 @@ app.delete("/api/gallery/:id", auth("admin"), async (req, res) => {
     const img = await GalleryImage.findById(req.params.id);
     if (!img) return res.status(404).json({ msg: "Image not found" });
 
-    const filePath = path.join(
-      __dirname,
-      "uploads",
-      img.imageUrl.replace("/uploads/", "")
-    );
+    // Extract filename from either relative or absolute URL
+    const filename = img.imageUrl.includes('/uploads/') 
+      ? img.imageUrl.split('/uploads/')[1] 
+      : img.imageUrl.split('/').pop();
+    
+    const filePath = path.join(__dirname, "uploads", filename);
 
     await GalleryImage.findByIdAndDelete(req.params.id);
 
