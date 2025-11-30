@@ -27,7 +27,7 @@ export default function Gallery() {
             onClick={() => setSelected(img)}
           >
             <img
-              src={`${process.env.REACT_APP_BACKEND_URL}${img.imageUrl}`}
+              src={img.imageUrl}
               alt={img.category}
             />
           </div>
@@ -38,7 +38,7 @@ export default function Gallery() {
         <div className="gallery-modal" onClick={() => setSelected(null)}>
           <img
             className="gallery-modal-img"
-            src={`${process.env.REACT_APP_BACKEND_URL}${selected.imageUrl}`}
+            src={selected.imageUrl}
             alt="full"
           />
         </div>

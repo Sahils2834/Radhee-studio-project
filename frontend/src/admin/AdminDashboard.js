@@ -338,7 +338,7 @@ export default function AdminDashboard() {
 
                   {gallery.map((g) => (
                     <div key={g._id} className="gallery-item">
-                      <img src={`${process.env.REACT_APP_BACKEND_URL}${g.imageUrl}`} alt="" />
+                      <img src={g.imageUrl} alt="" />
 
                       <div className="gallery-info">
                         <span>{g.category}</span>
