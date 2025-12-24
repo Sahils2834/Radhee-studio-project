@@ -68,15 +68,11 @@
 
   .nav-inner {
     justify-content: space-between;
-=======
-    gap: 0;
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
   }
 
   .nav-links {
     position: fixed;
     top: 70px;
-<<<<<<< HEAD
     left: 0;
     right: 0;
     flex-direction: column;
