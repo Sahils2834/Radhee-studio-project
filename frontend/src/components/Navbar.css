@@ -39,6 +39,7 @@
 }
 
 /* UNDERLINE EFFECT */
+.nav-links li:hover {
   opacity: 0.85;
   transform: translateY(-2px);
 }
