@@ -17,13 +17,8 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState("bookings");
   const [galleryFilter, setGalleryFilter] = useState("all");
 
-<<<<<<< HEAD
   const token = sessionStorage.getItem("token");
   const role = sessionStorage.getItem("role");
-=======
-  const token = localStorage.getItem("token");
-  const role = localStorage.getItem("role");
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 
   useEffect(() => {
     if (!token || role !== "admin") {

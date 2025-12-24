@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logoImg from "../assets/owner.jpg";
-
-=======
-import React, { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 import "./Navbar.css";
 
 export default function Navbar() {

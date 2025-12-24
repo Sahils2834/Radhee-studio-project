@@ -34,11 +34,7 @@ export default function Hero() {
           </div>
 
           <p className="hero-meta">
-<<<<<<< HEAD
              • Weddings • Pre-weddings • Studio  • Portraits • Family • Commercial
-=======
-            Pune • Weddings • Pre-weddings • Studio • Corporate
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
           </p>
         </div>
 
@@ -46,14 +42,10 @@ export default function Hero() {
           <div className="hero-image-wrapper">
             <img src={heroLogo} alt="Radhee Studio Logo" />
           </div>
-<<<<<<< HEAD
-          
-=======
           <div className="hero-badge">
             <span>10+ years</span>
             of crafted stories
           </div>
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
         </div>
       </div>
 

@@ -11,11 +11,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-contact">
-<<<<<<< HEAD
           {/* <p>Call: +91-XXXXXXXXXX</p> */}
-=======
-          <p>Call: +91-XXXXXXXXXX</p>
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
           <p>Email: radheestudio@gmail.com</p>
         </div>
 

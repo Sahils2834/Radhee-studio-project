@@ -5,7 +5,6 @@ import ownerPhoto from "../assets/owner.jpg";
 export default function Owner() {
   return (
     <section id="studio" className="owner-section">
-<<<<<<< HEAD
       <div className="owner-header">
         <h2 className="section-heading">Owner</h2>
         <p className="section-subtitle">The eye behind the stories</p>
@@ -13,10 +12,6 @@ export default function Owner() {
         {/* Centered badge below the subtitle */}
         <div className="owner-badge">10+ years of crafted stories</div>
       </div>
-=======
-      <h2 className="section-heading">Owner</h2>
-      <p className="section-subtitle">The eye behind the stories</p>
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 
       <div className="owner-card">
         <div className="owner-img-wrap">
