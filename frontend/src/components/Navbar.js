@@ -37,3 +37,31 @@ export default function Navbar() {
     setIsLoggedIn(false);
     navigate("/home");
   };
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <img src={logoImg} alt="Radhee Studio" className="navbar-logo" />
+        <div className={`nav-menu ${open ? "active" : ""}`}>
+          <button className="nav-link" onClick={() => goToSection("gallery")}>Gallery</button>
+          <button className="nav-link" onClick={() => goToSection("services")}>Services</button>
+          <button className="nav-link" onClick={() => goToSection("owner")}>About</button>
+          <button className="nav-link" onClick={() => goToSection("footer")}>Contact</button>
+          {isLoggedIn ? (
+            <button className="nav-link logout-btn" onClick={logout}>Logout</button>
+          ) : (
+            <>
+              <button className="nav-link" onClick={() => navigate("/login")}>Login</button>
+              <button className="nav-link" onClick={() => navigate("/signup")}>Signup</button>
+            </>
+          )}
+        </div>
+        <div className="hamburger" onClick={() => setOpen(!open)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  );
+}
