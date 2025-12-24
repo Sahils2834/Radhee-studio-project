@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .hero-meta {
   margin-top: 4px;
   font-size: 0.9rem;
@@ -8,11 +7,6 @@
 .hero {
   padding: 110px 0 90px;
 
-=======
-.hero {
-  padding-top: 130px; /* FIX: no overlap, no blank space */
-  padding-bottom: 60px;
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
   background: radial-gradient(
     circle at top left,
     #fffaf0 0,
@@ -22,7 +16,6 @@
 }
 
 .hero-inner {
-<<<<<<< HEAD
   max-width: 1250px;
   margin: 0 auto;
   padding: 0 2.5%;
@@ -30,14 +23,6 @@
   grid-template-columns: 1.1fr 0.9fr; 
   align-items: center;
   gap: 60px;
-=======
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  align-items: center;
-  gap: 45px;
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 }
 
 .hero-left h1 {
@@ -72,35 +57,20 @@
 }
 
 .hero-image-wrapper {
-<<<<<<< HEAD
   max-width: 420px;
   aspect-ratio: 3 / 4;        
   margin-left: 0 auto;
   border-radius: 26px;
   overflow: hidden;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
-=======
-  width: min(430px, 80vw);
-  background: #fff;
-  padding: 30px;
-  border-radius: 32px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 }
 
 .hero-image-wrapper img {
   width: 100%;
-<<<<<<< HEAD
   height: 100%;
   object-fit: cover;
   display: block;
 }
-=======
-  border-radius: 14px;
-  display: block;
-}
-
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 .hero-badge {
   position: absolute;
   bottom: 22px;
@@ -112,7 +82,6 @@
   font-size: 0.75rem;
   letter-spacing: 0.16em;
 }
-<<<<<<< HEAD
 .btn-row {
   display: flex;
   align-items: center;
@@ -127,35 +96,6 @@
   font-size: 0.95rem;
 }
 
-=======
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
-
-/* RESPONSIVE */
-@media (max-width: 960px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-left {
-    order: 2;
-  }
-
-  .hero-right {
-    order: 1;
-  }
-
-  .hero-badge {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-<<<<<<< HEAD
-    .btn-row {
-    flex-direction: column;
-    gap: 14px;
-  }
-=======
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 }
 
 @media (max-width: 600px) {

@@ -19,11 +19,7 @@ export default function Owner() {
         </div>
 
         <div className="owner-content">
-<<<<<<< HEAD
           <h3>Aniket Patil</h3>
-=======
-          <h3>Andesh Radhee</h3>
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
           <p className="owner-role">Founder • Lead Photographer</p>
           <p className="owner-text">
             With a passion for real emotions and authentic colours, Andesh has
@@ -39,11 +35,7 @@ export default function Owner() {
 
           <div className="owner-contact">
             <p>Email: <span>radheestudio@gmail.com</span></p>
-<<<<<<< HEAD
             {/* <p>Phone: <span>+91-XXXXXXXXXX</span></p> */}
-=======
-            <p>Phone: <span>+91-XXXXXXXXXX</span></p>
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
           </div>
         </div>
       </div>

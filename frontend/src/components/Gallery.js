@@ -122,7 +122,6 @@ export default function Gallery() {
         A glimpse into weddings, pre-weddings, studio portraits and branding work
       </p>
 
-<<<<<<< HEAD
       {/* Category Filter */}
       <div className="gallery-categories">
         {CATEGORIES.map((cat) => (
@@ -178,36 +177,8 @@ export default function Gallery() {
           <button className="nav-btn prev" onClick={prevImage}>❮</button>
           <img className="gallery-modal-img" src={selected.imageUrl} alt="" />
           <button className="nav-btn next" onClick={nextImage}>❯</button>
-=======
-      <div className="gallery-grid">
-        {images.map((img) => (
-          <div
-            key={img._id}
-            className="gallery-item"
-            onClick={() => setSelected(img)}
-          >
-            <img
-              src={`http://localhost:5000${img.imageUrl}`}
-              alt={img.category}
-            />
-          </div>
-        ))}
-      </div>
-
-      {selected && (
-        <div className="gallery-modal" onClick={() => setSelected(null)}>
-          <img
-            className="gallery-modal-img"
-            src={`http://localhost:5000${selected.imageUrl}`}
-            alt="full"
-          />
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
         </div>
       )}
     </section>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a

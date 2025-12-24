@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .owner-section {
   background: #fdfaf4;
   padding: 48px 20px; /* add comfortable spacing */
@@ -43,16 +42,6 @@
 .owner-card {
   max-width: 1050px;
   margin: 22px auto 0;
-=======
-
-.owner-section {
-  background: #fdfaf4;
-}
-
-.owner-card {
-  max-width: 1050px;
-  margin: 0 auto;
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
   gap: 40px;
@@ -62,29 +51,7 @@
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
 }
 
-<<<<<<< HEAD
 /* Image wrapper */
-=======
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
-.owner-img-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.owner-img-wrap img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #e1c06f;
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
-}
-
-<<<<<<< HEAD
-/* Content */
-=======
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 .owner-content h3 {
   font-size: 1.7rem;
   margin-bottom: 4px;
@@ -114,32 +81,5 @@
   font-weight: 500;
 }
 
-<<<<<<< HEAD
 /* Responsive */
-=======
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
-@media (max-width: 880px) {
-  .owner-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .owner-img-wrap {
-    order: 1;
-  }
-
-  .owner-content {
-    order: 2;
-  }
-
-  .owner-content h3 {
-    margin-top: 6px;
-  }
-<<<<<<< HEAD
-
-  .owner-badge {
-    margin-top: 14px;
-  }
-=======
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 }
