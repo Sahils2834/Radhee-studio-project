@@ -96,8 +96,6 @@
   font-size: 0.95rem;
 }
 
-}
-
 @media (max-width: 600px) {
   .hero {
     padding-top: 110px;

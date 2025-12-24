@@ -102,22 +102,10 @@ useEffect(() => {
   return (
     <section id="gallery" className="gallery-section">
       <h2 className="section-heading">GALLERY</h2>
-=======
-export default function Gallery() {
-  const [images, setImages] = useState([]);
-  const [selected, setSelected] = useState(null);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/api/gallery")
-      .then((res) => res.json())
-      .then((data) => setImages(data))
-      .catch((err) => console.error("Gallery fetch error:", err));
-  }, []);
 
   return (
     <section id="gallery" className="gallery-section">
       <h2 className="section-heading">Gallery</h2>
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
       <p className="section-subtitle">
         A glimpse into weddings, pre-weddings, studio portraits and branding work
       </p>
