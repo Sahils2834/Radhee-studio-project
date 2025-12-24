@@ -11,15 +11,8 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-responsive-carousel": "^3.2.23",
-<<<<<<< HEAD
-    "react-router": "^6.30.2",
-    "react-router-dom": "^6.30.2",
-    "react-scripts": "^5.0.1",
-    "sharp": "^0.34.5",
-=======
     "react-router-dom": "^7.9.6",
     "react-scripts": "5.0.1",
->>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
     "web-vitals": "^2.1.4"
   },
   "scripts": {
