@@ -9,7 +9,8 @@ import Services from "./components/Services";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
-
+import SignupPage from "./components/SignupPage";
+import ProtectedRoute from "./ProtectedRoute";
 import LoginPage from "./components/LoginPage";
 import BookingForm from "./components/BookingForm";
 import AdminDashboard from "./admin/AdminDashboard";
@@ -17,22 +18,28 @@ import CustomerBookings from "./components/CustomerBookings";
 
 export default function App() {
   const location = useLocation();
-  const role = localStorage.getItem("role");
+  const role = sessionStorage.getItem("role");
 
-  const hideNavbarPaths = ["/login", "/admin/dashboard"];
+  
+  const hideNavbarPaths = [ "/admin/dashboard"];
   const hideNavbar = hideNavbarPaths.includes(location.pathname);
 
   return (
     <div className="App">
       <CustomCursor />
 
-      {!hideNavbar && role === "customer" && <Navbar />}
+      {/* Show navbar only for customer pages */}
+      {!hideNavbar && <Navbar />}
 
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        {/* DEFAULT REDIRECT TO HOME */}
+        <Route path="/" element={<Navigate to="/home" />} />
 
+        {/* AUTH PAGES */}
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
 
+        {/* ADMIN DASHBOARD (ADMIN ONLY) */}
         <Route
           path="/admin/dashboard"
           element={
@@ -40,23 +47,21 @@ export default function App() {
           }
         />
 
+        {/* PUBLIC HOME PAGE */}
         <Route
           path="/home"
           element={
-            role === "customer" ? (
-              <>
-                <Hero />
-                <Owner />
-                <Services />
-                <Gallery />
-                <Footer />
-              </>
-            ) : (
-              <Navigate to="/login" />
-            )
+            <>
+              <Hero />
+              <Gallery />
+              <Services />
+              <Owner />
+              <Footer />
+            </>
           }
         />
 
+        {/* CUSTOMER BOOKINGS PAGE */}
         <Route
           path="/customer/bookings"
           element={
@@ -68,18 +73,18 @@ export default function App() {
           }
         />
 
+        {/* BOOKING PAGE — LOGIN REQUIRED */}
         <Route
           path="/book"
           element={
-            role === "customer" ? (
+            <ProtectedRoute>
               <BookingForm />
-            ) : (
-              <Navigate to="/login" />
-            )
+            </ProtectedRoute>
           }
         />
 
-        <Route path="*" element={<Navigate to="/" />} />
+        {/* CATCH-ALL */}
+        <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </div>
   );

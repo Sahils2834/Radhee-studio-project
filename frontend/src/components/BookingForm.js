@@ -30,7 +30,11 @@ export default function BookingForm() {
   const submitBooking = async (e) => {
     e.preventDefault();
     try {
+<<<<<<< HEAD
       await axios.post(`${process.env.REACT_APP_BACKEND_URL}/bookings`, form);
+=======
+      await axios.post("http://localhost:5000/api/bookings", form);
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
       alert("Booking submitted successfully!");
     } catch (err) {
       console.error(err);

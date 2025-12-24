@@ -17,8 +17,13 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState("bookings");
   const [galleryFilter, setGalleryFilter] = useState("all");
 
+<<<<<<< HEAD
+  const token = sessionStorage.getItem("token");
+  const role = sessionStorage.getItem("role");
+=======
   const token = localStorage.getItem("token");
   const role = localStorage.getItem("role");
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 
   useEffect(() => {
     if (!token || role !== "admin") {
@@ -30,7 +35,11 @@ export default function AdminDashboard() {
 
   const loadBookings = async () => {
     try {
+<<<<<<< HEAD
       const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/bookings`, {
+=======
+      const res = await axios.get("http://localhost:5000/api/bookings", {
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
         headers: authHeaders,
       });
       setBookings(res.data);
@@ -44,7 +53,11 @@ export default function AdminDashboard() {
       const q =
         !cat || cat === "all" ? "" : `?category=${encodeURIComponent(cat)}`;
 
+<<<<<<< HEAD
       const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/gallery${q}`);
+=======
+      const res = await axios.get(`http://localhost:5000/api/gallery${q}`);
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
       setGallery(res.data);
     } catch (err) {
       console.error("Gallery load error:", err);
@@ -63,7 +76,11 @@ export default function AdminDashboard() {
   const deleteBooking = async (id) => {
     if (!window.confirm("Delete this booking?")) return;
     try {
+<<<<<<< HEAD
       await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/bookings/${id}`, {
+=======
+      await axios.delete(`http://localhost:5000/api/bookings/${id}`, {
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
         headers: authHeaders,
       });
       loadBookings();
@@ -75,7 +92,11 @@ export default function AdminDashboard() {
   const deleteImage = async (id) => {
     if (!window.confirm("Delete this image?")) return;
     try {
+<<<<<<< HEAD
       await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/gallery/${id}`, {
+=======
+      await axios.delete(`http://localhost:5000/api/gallery/${id}`, {
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
         headers: authHeaders,
       });
       loadGallery();
@@ -149,7 +170,11 @@ export default function AdminDashboard() {
     try {
       setUploadProgress(0);
 
+<<<<<<< HEAD
       await axios.post(`${process.env.REACT_APP_BACKEND_URL}/gallery`, fd, {
+=======
+      await axios.post("http://localhost:5000/api/gallery", fd, {
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
         headers: {
           "Content-Type": "multipart/form-data",
           "x-auth-token": token,
@@ -173,8 +198,13 @@ export default function AdminDashboard() {
   };
 
   const logout = () => {
+<<<<<<< HEAD
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("role");
+=======
     localStorage.removeItem("token");
     localStorage.removeItem("role");
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
     navigate("/admin/login");
   };
 
@@ -338,7 +368,11 @@ export default function AdminDashboard() {
 
                   {gallery.map((g) => (
                     <div key={g._id} className="gallery-item">
+<<<<<<< HEAD
                       <img src={g.imageUrl} alt="" />
+=======
+                      <img src={`http://localhost:5000${g.imageUrl}`} alt="" />
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 
                       <div className="gallery-info">
                         <span>{g.category}</span>

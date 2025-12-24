@@ -16,6 +16,7 @@ const auth = require("./middleware/auth");
 
 const app = express();
 
+<<<<<<< HEAD
 app.use(cors({
   origin: [
     "http://localhost:3000",
@@ -23,6 +24,9 @@ app.use(cors({
   ],
   credentials: true
 }));
+=======
+app.use(cors());
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 app.use(express.json());
 
 // serve uploaded images
@@ -91,6 +95,10 @@ app.post("/api/auth/login", async (req, res) => {
     const { email, password } = req.body;
 
     let user = await User.findOne({ email });
+<<<<<<< HEAD
+    if (!user) {
+      return res.status(400).json({ msg: "User not found" });
+=======
 
     // AUTO CREATE CUSTOMER IF NOT EXISTS
     if (!user) {
@@ -102,6 +110,7 @@ app.post("/api/auth/login", async (req, res) => {
         role: "customer",
       });
       await user.save();
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
     }
 
     // validate password
@@ -189,12 +198,19 @@ app.post(
       }
 
       const category = req.body.category || "general";
+<<<<<<< HEAD
       const baseURL = process.env.BACKEND_URL || `http://localhost:${process.env.PORT || 5000}`;
+=======
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
       const saved = [];
 
       for (const file of req.files) {
         const img = new GalleryImage({
+<<<<<<< HEAD
           imageUrl: `${baseURL}/uploads/${file.filename}`,
+=======
+          imageUrl: "/uploads/" + file.filename,
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
           category,
         });
         await img.save();
@@ -214,6 +230,7 @@ app.get("/api/gallery", async (req, res) => {
     const { category } = req.query;
     const query = category ? { category } : {};
     const images = await GalleryImage.find(query).sort({ uploadedAt: -1 });
+<<<<<<< HEAD
     
     // Normalize URLs to ensure absolute URLs
     const baseURL = process.env.BACKEND_URL || `http://localhost:${process.env.PORT || 5000}`;
@@ -223,6 +240,9 @@ app.get("/api/gallery", async (req, res) => {
     }));
     
     res.json(normalizedImages);
+=======
+    res.json(images);
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server error" });
@@ -234,12 +254,20 @@ app.delete("/api/gallery/:id", auth("admin"), async (req, res) => {
     const img = await GalleryImage.findById(req.params.id);
     if (!img) return res.status(404).json({ msg: "Image not found" });
 
+<<<<<<< HEAD
     // Extract filename from either relative or absolute URL
     const filename = img.imageUrl.includes('/uploads/') 
       ? img.imageUrl.split('/uploads/')[1] 
       : img.imageUrl.split('/').pop();
     
     const filePath = path.join(__dirname, "uploads", filename);
+=======
+    const filePath = path.join(
+      __dirname,
+      "uploads",
+      img.imageUrl.replace("/uploads/", "")
+    );
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 
     await GalleryImage.findByIdAndDelete(req.params.id);
 

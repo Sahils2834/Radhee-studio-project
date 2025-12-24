@@ -33,4 +33,8 @@ export default function CustomCursor() {
   }, []);
 
   return <div className="custom-cursor" ref={cursorRef} />;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a

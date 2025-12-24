@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+/* NAVBAR CONTAINER */
+=======
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 .nav {
   position: fixed;
   top: 0;
@@ -9,12 +13,33 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
+<<<<<<< HEAD
+/* INNER WRAPPER */
+=======
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 .nav-inner {
   max-width: 1250px;
   margin: 0 auto;
   padding: 10px 2.5%;
   display: flex;
   align-items: center;
+<<<<<<< HEAD
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;          /* adjust if needed */
+  width: auto;
+  object-fit: contain;
+}
+
+/* NAV LINKS */
+=======
   gap: 40px;
 }
 
@@ -29,6 +54,7 @@
   flex-shrink: 0;
 }
 
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 .nav-links {
   list-style: none;
   display: flex;
@@ -47,6 +73,10 @@
   padding-bottom: 3px;
 }
 
+<<<<<<< HEAD
+/* UNDERLINE EFFECT */
+=======
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 .nav-links li::after {
   content: "";
   position: absolute;
@@ -62,6 +92,32 @@
   width: 100%;
 }
 
+<<<<<<< HEAD
+/* AUTH BUTTON */
+.nav-auth-btn {
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-auth-btn::after {
+  display: none;
+}
+
+.nav-auth-btn button {
+  background: #ff6f6f;
+  padding: 8px 22px;
+  border-radius: 28px;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.nav-auth-btn button:hover {
+=======
 .logout-btn {
   background: #ff6f6f;
   padding: 8px 20px;
@@ -76,10 +132,32 @@
 }
 
 .logout-btn:hover {
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
   opacity: 0.85;
   transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
+/* HAMBURGER ICON */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 22px;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 900px) {
+  .menu-icon {
+    display: flex;
+=======
 .menu-icon {
   display: none;
 }
@@ -90,27 +168,53 @@
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
     margin-left: auto;
   }
 
   .nav-inner {
     justify-content: space-between;
+<<<<<<< HEAD
+=======
     gap: 0;
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
   }
 
   .nav-links {
     position: fixed;
     top: 70px;
+<<<<<<< HEAD
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(247, 243, 234, 0.98);
+    padding: 22px 7% 30px;
+    gap: 16px;
+=======
     right: 0;
     left: 0;
     padding: 22px 7% 30px;
     flex-direction: column;
     gap: 16px;
     background: rgba(247, 243, 234, 0.98);
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
     max-height: 0;
     opacity: 0;
     overflow: hidden;
     transition: max-height 0.25s ease, opacity 0.25s ease;
+<<<<<<< HEAD
+    padding-bottom: 40px;
+  }
+
+  .nav-links.open {
+    max-height: 520px;
+    opacity: 1;
+  }
+
+  .nav-auth-btn {
+    margin: 12px 0 0;
+    justify-content: center;
+=======
     margin-left: 0;
   }
 
@@ -121,5 +225,6 @@
 
   .logout-btn {
     margin: 10px 0 0 0;
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
   }
 }

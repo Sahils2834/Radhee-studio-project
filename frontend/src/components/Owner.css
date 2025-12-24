@@ -1,3 +1,49 @@
+<<<<<<< HEAD
+.owner-section {
+  background: #fdfaf4;
+  padding: 48px 20px; /* add comfortable spacing */
+}
+
+/* New header wrapper to center heading, subtitle and badge */
+.owner-header {
+  text-align: center;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+/* keep your existing section-heading style if present */
+.owner-header .section-heading {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* subtitle (small description under title) */
+.owner-header .section-subtitle {
+  margin-top: 8px;
+  color: #b69f85;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+/* centered pill badge immediately below subtitle */
+.owner-badge {
+  display: inline-block;
+  margin: 10px auto 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #0f0f0f;
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+/* Owner card */
+.owner-card {
+  max-width: 1050px;
+  margin: 22px auto 0;
+=======
 
 .owner-section {
   background: #fdfaf4;
@@ -6,6 +52,7 @@
 .owner-card {
   max-width: 1050px;
   margin: 0 auto;
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
   gap: 40px;
@@ -15,6 +62,10 @@
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
 }
 
+<<<<<<< HEAD
+/* Image wrapper */
+=======
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 .owner-img-wrap {
   display: flex;
   justify-content: center;
@@ -30,6 +81,10 @@
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
 }
 
+<<<<<<< HEAD
+/* Content */
+=======
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 .owner-content h3 {
   font-size: 1.7rem;
   margin-bottom: 4px;
@@ -59,6 +114,10 @@
   font-weight: 500;
 }
 
+<<<<<<< HEAD
+/* Responsive */
+=======
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 @media (max-width: 880px) {
   .owner-card {
     grid-template-columns: 1fr;
@@ -76,4 +135,11 @@
   .owner-content h3 {
     margin-top: 6px;
   }
+<<<<<<< HEAD
+
+  .owner-badge {
+    margin-top: 14px;
+  }
+=======
+>>>>>>> 2b4edc8727ac075520d32d42922c113472618e5a
 }
