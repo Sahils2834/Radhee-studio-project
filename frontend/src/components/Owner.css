@@ -83,3 +83,17 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .owner-section {
+    padding: 40px 20px;
+  }
+
+  .owner-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .owner-image img {
+    width: 300px;
+    height: 300px;
+  }
+}

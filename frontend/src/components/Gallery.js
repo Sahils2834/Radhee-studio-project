@@ -79,29 +79,25 @@ export default function Gallery() {
   }, [selected, currentIndex, images]);
 
   // Scroll reveal animation
-useEffect(() => {
-  const cards = document.querySelectorAll(".gallery-card");
+  useEffect(() => {
+    const cards = document.querySelectorAll(".gallery-card");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
 
-  cards.forEach((card) => observer.observe(card));
+    cards.forEach((card) => observer.observe(card));
 
-  return () => observer.disconnect();
-}, [images]);
-
-  return (
-    <section id="gallery" className="gallery-section">
-      <h2 className="section-heading">GALLERY</h2>
+    return () => observer.disconnect();
+  }, [images]);
 
   return (
     <section id="gallery" className="gallery-section">

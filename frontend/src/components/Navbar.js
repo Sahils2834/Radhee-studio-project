@@ -34,3 +34,6 @@ export default function Navbar() {
   const logout = () => {
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("role");
+    setIsLoggedIn(false);
+    navigate("/home");
+  };
